@@ -19,6 +19,7 @@ jobs:
       - run: npm install
       - uses: robinraju/release-downloader@v1
         with:
+          token: ${{ secrets.PAT }}
           repository: "clusterflick/data-transformed"
           latest: true
           fileName: "*"
