@@ -79,6 +79,13 @@ jobs:
         run: |
           echo "🔖 New release - ${{ steps.release.outputs.html_url }}" >> $GITHUB_STEP_SUMMARY
 
+  trigger_downstream:
+    name: Trigger downstream
+    runs-on: ubuntu-latest
+    needs: [check_already_run, cache_data]
+    # Run if workflow wasn't cancelled and didn't fail - this includes when cache_data was skipped
+    if: ${{ always() && !failure() && !cancelled() }}
+    steps:
       - name: Repository Dispatch for data-combined
         uses: peter-evans/repository-dispatch@v3
         with:
