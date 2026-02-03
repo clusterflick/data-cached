@@ -32,6 +32,13 @@ The workflow is automatically triggered when the
 completes successfully. It can also be triggered manually via workflow dispatch
 if needed.
 
+## Downstream Triggers
+
+After successfully caching the data, this workflow triggers:
+
+- [data-combined](https://github.com/clusterflick/data-combined) - To combine
+  all venue data into a unified dataset
+
 ## Maintenance
 
 ### Dependencies
