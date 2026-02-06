@@ -51,7 +51,7 @@ jobs:
         with:
           node-version-file: .node-version
       - run: npm install
-      - uses: robinraju/release-downloader@v1
+      - uses: clusterflick/release-downloader@v1
         with:
           token: ${{ secrets.PAT }}
           repository: "clusterflick/data-transformed"
