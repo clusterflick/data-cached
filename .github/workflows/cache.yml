@@ -9,6 +9,9 @@ concurrency:
   group: cache-data
   cancel-in-progress: false
 
+permissions:
+  contents: read
+
 jobs:
   check_already_run:
     name: Check if release already created today
@@ -47,6 +50,8 @@ jobs:
       MOVIEDB_API_KEY: ${{ secrets.MOVIEDB_API_KEY }}
     steps:
       - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
       - uses: actions/setup-node@v6
         with:
           node-version-file: .node-version
