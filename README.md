@@ -15,7 +15,7 @@ The workflow executes the cache command to build a local cache of movie
 metadata:
 
 ```bash
-npx clusterflick/scripts cache
+npm run cache
 ```
 
 This command:

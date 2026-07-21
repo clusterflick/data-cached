@@ -63,7 +63,7 @@ jobs:
           out-file-path: "transformed-data"
 
       - name: Cache Data
-        run: npx clusterflick/scripts cache
+        run: npm run cache
 
       - name: Generate Tag
         run: echo "TAG=$(TZ=Europe/London date +'%Y%m%d.%H%M%S')" >> $GITHUB_ENV
