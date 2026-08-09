@@ -62,6 +62,20 @@ jobs:
           fileName: "*"
           out-file-path: "transformed-data"
 
+      # Movies that have stopped screening are in no venue's data any more, so
+      # the registry is the only thing that knows their pages still need TMDB
+      # data. Optional: without it the cache covers what is showing, which is
+      # what it has always done.
+      - name: Download seen registry
+        continue-on-error: true
+        uses: clusterflick/release-downloader@v2
+        with:
+          token: ${{ secrets.PAT }}
+          repository: "clusterflick/data-diffed"
+          latest: true
+          fileName: "seen-registry.json"
+          out-file-path: "diffed-data"
+
       - name: Cache Data
         run: npm run cache
 

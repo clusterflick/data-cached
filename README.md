@@ -28,9 +28,12 @@ This command:
 ## Schedule
 
 The workflow is automatically triggered when the
-[data transformation workflow](https://github.com/clusterflick/data-transformed)
-completes successfully. It can also be triggered manually via workflow dispatch
-if needed.
+[data diffing workflow](https://github.com/clusterflick/data-diffed) completes,
+which is itself triggered by
+[data transformation](https://github.com/clusterflick/data-transformed). Running
+after the diff rather than beside it means the seen registry it reads describes
+the same release it is about to cache. It can also be triggered manually via
+workflow dispatch if needed.
 
 ## Downstream Triggers
 
