@@ -50,3 +50,19 @@ The workflow requires API keys configured as GitHub secrets:
 
 - `MOVIEDB_API_KEY` - For fetching movie metadata from The Movie Database
 - `PAT` - Personal Access Token for triggering downstream workflows
+
+## Licence
+
+The code in this repository is licensed under the [MIT licence](LICENSE).
+
+The releases are **not licensed at all**. They are film metadata retrieved from
+The Movie Database and cached for the pipeline's use — synopses, cast and crew,
+release dates, poster paths, genres and trailer ids. Almost none of it is
+Clusterflick's own work: it belongs to TMDB, is used under the
+[TMDB API terms of use](https://www.themoviedb.org/api-terms-of-use), and cannot
+be sublicensed. If you want this metadata, get it from TMDB under your own API
+terms.
+
+For data you can use, see the
+[data licence](https://clusterflick.com/data-licence). The exact terms for this
+repository are in [LICENSE-DATA](LICENSE-DATA).

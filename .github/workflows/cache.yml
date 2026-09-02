@@ -91,6 +91,8 @@ jobs:
           tag: ${{ env.TAG }}
           commit: main
           body: |
+            ⚠️ **Internal build artifact — not licensed.** This is film metadata from The Movie Database, cached for the pipeline's use. It belongs to TMDB, is used under the [TMDB API terms of use](https://www.themoviedb.org/api-terms-of-use), and cannot be sublicensed — get it from TMDB under your own API terms. For data you can use, see https://clusterflick.com/data-licence
+
             Created by job ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
       - name: Output summary
         run: |
