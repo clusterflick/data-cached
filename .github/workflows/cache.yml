@@ -54,7 +54,7 @@ jobs:
       MOVIEDB_API_KEY: ${{ secrets.MOVIEDB_API_KEY }}
     steps:
       - uses: clusterflick/.github/setup@main
-      - uses: clusterflick/release-downloader@v2
+      - uses: clusterflick/release-downloader@v4
         with:
           token: ${{ secrets.PAT }}
           repository: "clusterflick/data-transformed"
@@ -68,7 +68,7 @@ jobs:
       # what it has always done.
       - name: Download seen registry
         continue-on-error: true
-        uses: clusterflick/release-downloader@v2
+        uses: clusterflick/release-downloader@v4
         with:
           token: ${{ secrets.PAT }}
           repository: "clusterflick/data-diffed"
