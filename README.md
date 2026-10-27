@@ -1,5 +1,13 @@
 # data-cached
 
+> **[Clusterflick](https://clusterflick.com)** is a free, open-source site
+> listing every film showing in London, from 450+ venues in one search.
+>
+> This repository is the stage of the data pipeline that caches The Movie
+> Database (TMDB) metadata for every film in the listings. See the
+> [Clusterflick organisation](https://github.com/clusterflick) for how the
+> pieces fit together.
+
 This repository contains the automated workflow for caching MovieDB data for the
 Clusterflick project.
 
